@@ -1,0 +1,41 @@
+@use 'variables' as v;
+
+.object{
+   &__header{
+    box-sizing: border-box;
+    padding: 42px;
+    width: 326px;
+    height: 201px;
+    border: red solid 2px;
+    border-top-right-radius: 30px;
+    background-color: v.$cl-neutral-darkBlue;
+    &::after{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border: red 4px solid;
+    }
+   } 
+   &__logo{
+    margin-bottom: 33px;
+    & img{
+        height: 42px;
+    }
+   }
+   &__utility{
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__utilityContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 49px;
+        height: 49px;
+        background-color: darkblue;
+        &:not(:last-child){
+            margin-right: 16px;
+        }
+    }
+}
