@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -9,49 +10,36 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Fylo data storage component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 
 <body>
-  <div class="container">
-    <article class="object__header">
-      <div class="object__logo">
+  <main>
+    <section class="header">
+      <div class="header__logo">
         <img src="./images/logo.svg" alt="fylo-logo">
       </div>
+      <div class="header__utility">
+        <img class="header__imgDocument" src="./images/icon-document.svg"  alt="document-icon">
+        <img class="header__imgFolder" src="./images/icon-folder.svg" alt="folder-icon">
+        <img class="header__imgUpload" src="./images/icon-upload.svg" alt="upload-icon">
+      </div>
+    </section>
 
-      <div class="object__utility">
-        <div class="object__utilityContainer">
-          <img src="./images/icon-document.svg"  alt="document-icon">
-        </div>
-        <div class="object__utilityContainer">
-          <img src="./images/icon-folder.svg" alt="folder-icon">
-        </div>
-        <div class="object__utilityContainer">
-          <img src="./images/icon-upload.svg" alt="upload-icon">
+    <section class="footer">
+      <h1 class="footer__header">You’ve used <span>815 GB</span> of your storage</h1>
+      <div class="footer__popBox">
+        <div class="footer__box"><span>185</span>GB Left</div>
+      </div>
+      <div class="footer__download">
+        <div class="footer__downloadBar">
+          <div class="footer_downloadball"></div>
         </div>
       </div>
-    </article>
-
-    <article class="object__footer">
-      <p class="object__description">You’ve used <span style="color: white; font-weight: 700;">815 GB</span> of your storage</p>
-      <div class="object__loading"></div>
-      <div class="object__limit">
-        <p style="color: white; font-weight: 700;">0 GB</p>
-        <p style="color: white; font-weight: 700;">1000 GB</p>
+      <div class="footer__parameter">
+        <p>0 GB</p>
+        <P>100 GB</P>
       </div>
-      <div class="object__information"> <span style="color: black; font-size: 40px; padding-right: 10px;">185 </span>GB Left
-      </div>
-    </article>
-  </div>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/obhasa12">Obhasa Putra</a>.
-  </div>
+    </section>
+  </main>
 </body>
 </html>
