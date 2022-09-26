@@ -1,3 +1,6 @@
+@use 'mixins' as m;
+@use 'variables' as v;
+
 html{
     font-size: 100%;
     box-sizing: border-box;
@@ -12,7 +15,27 @@ html,body,h1,h2,h3,p{
 }
 body{
     font-family: 'Raleway', sans-serif;
+    background-color: v.$cl-neutral-veryDarkBlue;
     background-image: url(../images/bg-mobile.png);
     background-repeat: no-repeat;
+    @include m.breakpoints-up(small){
+        background-color: v.$cl-neutral-veryDarkBlue;
+        background-image:url(../images/bg-desktop.png);
+        background-position: bottom;
+        background-size: 100% 50%;
+        border-top-left-radius: 20px;
+    }
+}
+
+.container {
+    margin: 85px 25px;
+    @include m.breakpoints-up(small){
+        margin:0 260px;
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        height: 98vh;
+    }
+
 }
 
