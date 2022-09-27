@@ -3,7 +3,7 @@
 
 html{
     font-size: 100%;
-    box-sizing: border-box;
+    box-sizing:  border-box;
 }
 *,*::before*::after{
     box-sizing: inherit;
@@ -14,11 +14,32 @@ html,body,h1,h2,h3,p{
     padding: 0;
 }
 body{
+    display: flex;
     font-family: 'Raleway', sans-serif;
+    height: 100vh;
     background-color: v.$cl-neutral-veryDarkBlue;
     background-image: url(../images/bg-mobile.png);
     background-repeat: no-repeat;
-
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    @include m.breakpoints-up(small){
+        background-image: url(../images/bg-desktop.png);
+        background-repeat: no-repeat;
+        background-size: 100% 50%;
+        background-position: bottom;
+    }
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1rem;
+    @include m.breakpoints-up(small){
+        flex-direction: row;
+        gap: 30px;
+    }
+}
 

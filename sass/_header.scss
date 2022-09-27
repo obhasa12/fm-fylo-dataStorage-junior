@@ -1,0 +1,35 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.header{
+ padding: 42px 108px 42px 42px;  
+ background-color: v.$cl-neutral-darkBlue; 
+ border-radius: 10px 100px 10px 10px;
+    @include m.breakpoints-up(small){
+        padding: 38px 133px 40px 41px;
+        gap: 1rem;
+    }
+    &__logo{
+        margin-bottom: 33px;
+    }
+    &__logoImg{
+        width: 137px;
+        height: 40px;
+    }
+    &__utility{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+    &__imgDocument,&__imgFolder,&__imgUpload{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        background-color: v.$cl-neutral-veryDarkBlue;
+        border-radius: 10px;
+    }
+
+
+}

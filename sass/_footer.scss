@@ -1,0 +1,103 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.footer{
+    position: relative;
+    padding: 33px 33px 50px 33px;
+    border-radius: 10px;
+    background-color: v.$cl-neutral-darkBlue;
+    &__header{
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        color: v.$cl-neutral-grayishBlue;
+        font-weight: 100;
+        &>span{
+            color: v.$cl-neutral-paleBlue;
+            font-weight: 700;
+        }
+    }
+    @include m.breakpoints-up(small){
+        padding: 40px;
+        width: 458px;
+    }  
+    &__popBox{
+
+    }
+    &__box{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: absolute;
+        padding: 16px 21px 16px 21px;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: v.$cl-neutral-grayishBlue;
+        background-color: v.$cl-neutral-paleBlue;
+        border-radius: 10px;
+        top: 100%;
+        left: 50%;
+        right: -5%;
+        transform: translate(-50%, -50%);
+        &>span{
+            padding-right: 11px;
+            color:black;
+            font-size: 37px;
+            font-weight: 700;
+        }
+        @include m.breakpoints-up(small){   
+            top: -32%;
+            left:59%;
+            right: 40px;
+            transform: none;
+            &::before{
+                content: "";
+                position: absolute;
+                border-top: 20px solid v.$cl-neutral-paleBlue;
+                border-right: 20px solid v.$cl-neutral-paleBlue;
+                border-bottom: 20px solid transparent;
+                border-left: 20px solid transparent;
+                right: 0px;
+                bottom: -21px;
+                
+            }
+        }
+    }
+    &__download{
+        display: flex;
+        align-items: center;
+        min-width: 261px;
+        min-height: 19px;
+        border-radius: 20px;
+        background-color: v.$cl-neutral-veryDarkBlue;
+    }
+    &__downloadBar{
+        display: flex;
+        justify-content: flex-end;
+        margin: 2px;
+        margin-left: 3px;
+        width: 194px;
+        height: 13px;
+        border-radius: 20px;
+        background: v.$cl-primary-gradient;
+        @include m.breakpoints-up(small){
+            width: 339px;
+        }
+    }
+    &__downloadBall{
+        margin: 1px 0;
+        margin-right: 2px;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background-color: v.$cl-neutral-paleBlue;
+    }
+    &__parameter{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-weight: 700;
+        color: v.$cl-neutral-paleBlue;
+
+    }
+}
